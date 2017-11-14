@@ -165,8 +165,8 @@ def player_numbers(team)
     binding.pry
     #below, why do we have to have 'game_hash'?  aren't we already inside :home?
     #if side[:team_name]
-    if game_hash[side][:team_name] == team
-      game_hash[side][:players].each do |player_name, stat_keys|
+    if infos[:team_name] == team
+      infos[:players].each do |player_name, stat_keys|
         numbers << stat_keys[:number]
       end
     end
