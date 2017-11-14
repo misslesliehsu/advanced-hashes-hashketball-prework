@@ -119,20 +119,20 @@ require 'pry'
     end
 
 def num_points_scored(player_name)
-  if game_hash[:home][:players].include?(player_name)
-    game_hash[:home][:players][player_name][:points]
-  elsif game_hash[:away][:players].include?(player_name)
-      game_hash[:away][:players][player_name][:points]
-  end
-end
-
-=begin
+  #if game_hash[:home][:players].include?(player_name)
+#    game_hash[:home][:players][player_name][:points]
+#  elsif game_hash[:away][:players].include?(player_name)
+#      game_hash[:away][:players][player_name][:points]
+#  end
+#end
+  num = 0
   game_hash.each do |key, values|
-    if key[:players][player_name]
-      key[:players][player_name][:points]
+    if game_hash[key][:players][player_name]
+      num = game_hash[key][:players][player_name][:points]
     end
   end
-=end
+  num
+end
 
 
 def shoe_size(player_name)
